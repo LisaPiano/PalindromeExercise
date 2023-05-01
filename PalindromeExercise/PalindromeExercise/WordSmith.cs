@@ -11,22 +11,35 @@ namespace PalindromeExercise
 
         public bool IsAPalindrome(string word)
         {
-
-            string reverse = "";
-            for (int i = word.Length -1; i >= 0; i--)
+            if (word == null || word.Length == 0)
             {
-                reverse += word[i];
+                return false;
             }
 
-            if (reverse == word)
-            {
-                return true;
-            }
-            else
-            { 
-                return false; 
-            }
+            //string reverse = "";
+            //for (int i = word.Length -1; i >= 0; i--)
+            //{
+            //    reverse += word[i];
+            //}
 
+            //if (reverse == word)
+            //{
+            //    return true;
+            //}
+            //else
+            //{ 
+            //    return false; 
+            //}
+
+            //refactored below
+
+            string lower = word.ToLower();
+
+            var reversedWord = lower.Reverse();
+
+            return lower.SequenceEqual(reversedWord);
+
+           
 
 
         }

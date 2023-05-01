@@ -13,6 +13,9 @@ namespace PalindromeExerciseTests
         [InlineData("crazy", false)]
         [InlineData("foof", true)]
         [InlineData("lalapaloo", false)]
+        [InlineData(null, false)]
+        [InlineData("", false)]
+        [InlineData("Racecar", true)]
         public void Test1(string word, bool expected)
         {
             //Arrange
